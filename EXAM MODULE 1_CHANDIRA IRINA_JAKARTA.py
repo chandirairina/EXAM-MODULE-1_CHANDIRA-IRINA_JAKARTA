@@ -29,16 +29,20 @@ def Hashtag(string):
             return stringbaru
 
 #normal case, random capitalized words
-tes=Hashtag(" Hello how are you dOing")
+tes=Hashtag(" Hello there how are you doing")
 print(tes)
+
+#case banyak spasi
+tesdua=Hashtag(" Hello    World")
+print(tesdua)
 
 #case of empty string
 tes2=Hashtag("")
 print(tes2)
 
-#case of string longer than 140 words
-tes3=Hashtag("Sebelumnya Perkenalkan Saya Angel Team Operational Purwadhika Jakarta ingin menginformasikan kelas kita yg sementara full online sampai situasi kondusif, untuk kelas perdana kita akan di mulai, ")
-print(tes3)
+# #case of string longer than 140 words
+# tes3=Hashtag("Sebelumnya Perkenalkan Saya Angel Team Operational Purwadhika Jakarta ingin menginformasikan kelas kita yg sementara full online sampai situasi kondusif, untuk kelas perdana kita akan di mulai, ")
+# print(tes3)
 
 #NOMOR 2 FIX
 def create_phone_number(number):
@@ -55,7 +59,6 @@ def create_phone_number(number):
             else:
                 # print("not integer or not between 0-9")
                 return False
-                
                 break
 
 #bikin format phone numbernya
@@ -69,13 +72,13 @@ def create_phone_number(number):
 testno2_1=create_phone_number([1,2,3,4,5,6,7,8,9,0])
 print(testno2_1)
 
-#case of more than 10 nums
-testno2_2=create_phone_number([1,2,3,4,5,6,7,8,9,0,1])
-print(testno2_2)
+# #case of more than 10 nums
+# testno2_2=create_phone_number([1,2,3,4,5,6,7,8,9,0,1])
+# print(testno2_2)
 
-#case of not all integers
-testno2_3=create_phone_number([1,"string",3,4,5,6,7,8,9,0])
-print(testno2_3)
+# #case of not all integers
+# testno2_3=create_phone_number([1,"string",3,4,5,6,7,8,9,0])
+# print(testno2_3)
 
 #NOMOR 3 FIX
 def sort_odd_even(num):
@@ -83,7 +86,6 @@ def sort_odd_even(num):
 #case of an empty string, return empty string
     if num==[]:
         return num
-
     else:
 #misahin dulu ganjil dan genap menjadi 2 list berbeda untuk mempermudah sorting
         ganjil=[]
@@ -131,10 +133,10 @@ def sort_odd_even(num):
 test1=sort_odd_even([5,3,2,8,1,4])
 print(test1)
 
-#test other cases
-testing=sort_odd_even([1,2,3,4,5,6,7,8,9,10,11,12])
-print(testing)
+# #test other cases
+# testing=sort_odd_even([1,2,3,4,5,6,7,8,9,10,11,12])
+# print(testing)
 
-#case of an empty list
-test2=sort_odd_even([])
-print(test2)
+# #case of an empty list
+# test2=sort_odd_even([])
+# print(test2)
