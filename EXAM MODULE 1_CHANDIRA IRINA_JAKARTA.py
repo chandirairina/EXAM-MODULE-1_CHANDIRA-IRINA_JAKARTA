@@ -1,32 +1,33 @@
 #NOMOR 1 FIX
 def Hashtag(string):
-    #untuk kondisi empty string, input maupun result pasti bakal sama aja
-    if string=="":
-        return False
-    else:
-    #splitting the string 
-        splitted=string.split()
-    #membuat list yang berisi kata2 dari string dengan huruf depan kapital semua
-        capitalized=[]
-
-    #membuat kata2 dari string supaya huruf depannya kapital semua    
-        for i in splitted:
-            capitalized.append(i.capitalize())
-
-    #string kosong buat nampung gabungan kata2 yang udah kapital depannya
-        stringbaru=""
-    #menggabungkan string yang huruf depan dari setiap katanya udah huruf kapital semua
-        for j in capitalized:
-            stringbaru+=j
-
-    #supaya depannya ada hashtagnya
-        stringbaru="#"+stringbaru
-    
-    #kalau final result lebih dari 140 chars, return False
-        if len(stringbaru)>140:
+    if type(string)==str:
+        #untuk kondisi empty string, input maupun result pasti bakal sama aja
+        if string=="":
             return False
         else:
-            return stringbaru
+        #splitting the string 
+            splitted=string.split()
+        #membuat list yang berisi kata2 dari string dengan huruf depan kapital semua
+            capitalized=[]
+
+        #membuat kata2 dari string supaya huruf depannya kapital semua    
+            for i in splitted:
+                capitalized.append(i.capitalize())
+
+        #string kosong buat nampung gabungan kata2 yang udah kapital depannya
+            stringbaru=""
+        #menggabungkan string yang huruf depan dari setiap katanya udah huruf kapital semua
+            for j in capitalized:
+                stringbaru+=j
+
+        #supaya depannya ada hashtagnya
+            stringbaru="#"+stringbaru
+        
+        #kalau final result lebih dari 140 chars, return False
+            if len(stringbaru)>140:
+                return False
+            else:
+                return stringbaru
 
 #normal case, random capitalized words
 tes=Hashtag(" Hello there how are you doing")
@@ -43,6 +44,10 @@ print(tes2)
 #case of string longer than 140 words
 # tes3=Hashtag("Sebelumnya Perkenalkan Saya Angel Team Operational Purwadhika Jakarta ingin menginformasikan kelas kita yg sementara full online sampai situasi kondusif, untuk kelas perdana kita akan di mulai, ")
 # print(tes3)
+
+# #case of string not str
+# tes4=Hashtag(1234)
+# print(tes4)
 
 #NOMOR 2 FIX
 def create_phone_number(number):
