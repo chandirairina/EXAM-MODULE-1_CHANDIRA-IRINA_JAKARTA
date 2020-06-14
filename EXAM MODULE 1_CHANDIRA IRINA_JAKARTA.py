@@ -1,6 +1,6 @@
 #NOMOR 1 FIX
 def Hashtag(string):
-    #untuk kondisi empty string
+    #untuk kondisi empty string, input maupun result pasti bakal sama aja
     if string=="":
         return False
     else:
@@ -42,19 +42,40 @@ print(tes3)
 
 #NOMOR 2 FIX
 def create_phone_number(number):
-
+    nolsembilan=[1,2,3,4,5,6,7,8,9,0]
+#panjang string harus 10
+    if len(number)==10:
 #empty string buat nampung angka dalam bentuk string
-    phone=""
+        phone=""
+        for i in number:
+#harus between 0-9
+            if type(i)==int and i in nolsembilan:
 #supaya "phone" berisi angka dalam bentuk string
-    for i in number:
-        phone+=str(i)
+                phone+=str(i)
+            else:
+                # print("not integer or not between 0-9")
+                return False
+                
+                break
 
 #bikin format phone numbernya
-    phoneno="("+phone[0:3]+")"+" "+phone[3:6]+"-"+phone[6:]
-    return phoneno
+        phoneno="("+phone[0:3]+")"+" "+phone[3:6]+"-"+phone[6:]
+        return phoneno
+    else:
+        # print("should be 10 integers between 0-9")
+        return False
+        
+#normal case
+testno2_1=create_phone_number([1,2,3,4,5,6,7,8,9,0])
+print(testno2_1)
 
-testno2=create_phone_number([0,1,2,3,4,5,6,7,8,9])
-print(testno2)
+#case of more than 10 nums
+testno2_2=create_phone_number([1,2,3,4,5,6,7,8,9,0,1])
+print(testno2_2)
+
+#case of not all integers
+testno2_3=create_phone_number([1,"string",3,4,5,6,7,8,9,0])
+print(testno2_3)
 
 #NOMOR 3 FIX
 def sort_odd_even(num):
